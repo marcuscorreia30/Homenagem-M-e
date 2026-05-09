@@ -579,6 +579,10 @@ section p {
         font-size: 1.4rem;
     }
 
+    section {
+        padding: 20px 15px;
+    }
+
     .timeline-item {
         flex-direction: column;
         align-items: flex-start;
@@ -591,12 +595,61 @@ section p {
     }
 
     .photos-table {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .photos-table thead,
+    .photos-table tbody,
+    .photos-table tr,
+    .photos-table th,
+    .photos-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .photos-table tr {
+        margin-bottom: 20px;
+        border: 1px solid var(--gray-medium);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .photos-table th {
+        display: none;
+    }
+
+    .photos-table td {
+        padding: 12px 15px;
+        border: none;
+        border-bottom: 1px solid var(--gray-medium);
+    }
+
+    .photos-table td:last-child {
+        border-bottom: none;
+    }
+
+    .photos-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: var(--purple-dark);
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .photos-table td[data-label]::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 80px;
     }
 
     .photo-img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 
     .header-decoration {
